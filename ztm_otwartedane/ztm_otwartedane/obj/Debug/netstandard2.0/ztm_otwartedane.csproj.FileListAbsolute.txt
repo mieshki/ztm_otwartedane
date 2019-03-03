@@ -1,0 +1,16 @@
+C:\Users\mdziadox\source\repos\ztm_otwartedane\ztm_otwartedane\ztm_otwartedane\bin\Debug\netstandard2.0\ztm_otwartedane.deps.json
+C:\Users\mdziadox\source\repos\ztm_otwartedane\ztm_otwartedane\ztm_otwartedane\bin\Debug\netstandard2.0\ztm_otwartedane.dll
+C:\Users\mdziadox\source\repos\ztm_otwartedane\ztm_otwartedane\ztm_otwartedane\bin\Debug\netstandard2.0\ztm_otwartedane.pdb
+C:\Users\mdziadox\source\repos\ztm_otwartedane\ztm_otwartedane\ztm_otwartedane\obj\Debug\netstandard2.0\ztm_otwartedane.csprojAssemblyReference.cache
+C:\Users\mdziadox\source\repos\ztm_otwartedane\ztm_otwartedane\ztm_otwartedane\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\mdziadox\source\repos\ztm_otwartedane\ztm_otwartedane\ztm_otwartedane\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\mdziadox\source\repos\ztm_otwartedane\ztm_otwartedane\ztm_otwartedane\obj\Debug\netstandard2.0\ztm_otwartedane.csproj.CoreCompileInputs.cache
+C:\Users\mdziadox\source\repos\ztm_otwartedane\ztm_otwartedane\ztm_otwartedane\obj\Debug\netstandard2.0\ztm_otwartedane.AssemblyInfoInputs.cache
+C:\Users\mdziadox\source\repos\ztm_otwartedane\ztm_otwartedane\ztm_otwartedane\obj\Debug\netstandard2.0\ztm_otwartedane.AssemblyInfo.cs
+C:\Users\mdziadox\source\repos\ztm_otwartedane\ztm_otwartedane\ztm_otwartedane\obj\Debug\netstandard2.0\ztm_otwartedane.dll
+C:\Users\mdziadox\source\repos\ztm_otwartedane\ztm_otwartedane\ztm_otwartedane\obj\Debug\netstandard2.0\ztm_otwartedane.pdb
+C:\Users\mdziadox\source\repos\ztm_otwartedane\ztm_otwartedane\ztm_otwartedane\bin\Debug\netstandard2.0\Mono.Android.dll
+C:\Users\mdziadox\source\repos\ztm_otwartedane\ztm_otwartedane\ztm_otwartedane\bin\Debug\netstandard2.0\Mono.Android.pdb
+C:\Users\mdziadox\source\repos\ztm_otwartedane\ztm_otwartedane\ztm_otwartedane\bin\Debug\netstandard2.0\Mono.Android.xml
+C:\Users\mdziadox\source\repos\ztm_otwartedane\ztm_otwartedane\ztm_otwartedane\obj\Debug\netstandard2.0\ztm_otwartedane.csproj.CopyComplete
+C:\Users\mdziadox\source\repos\ztm_otwartedane\ztm_otwartedane\ztm_otwartedane\obj\Debug\netstandard2.0\XamlC.stamp
