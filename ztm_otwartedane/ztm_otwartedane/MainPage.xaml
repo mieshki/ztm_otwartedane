@@ -8,17 +8,14 @@
         <SearchBar
             Placeholder="Wpisz nazwę przystanku..."
             TextChanged="FilterBusStops_TextChanged"/>
-        <Button
-            Text="Update bus stops"
-            Clicked="btnUpdateBusStop_Clicked"/>
-        <Label
-            x:Name="testLabel"/>
-        <ListView x:Name="listViewBusStops">
+        <ListView x:Name="listViewBusStops"
+                  ItemSelected="ListViewBusStops_ItemSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <Label
-                            Text="{Binding name}"/>
+                            Margin="20, 0, 0, 20"
+                            Text="{Binding stopName}"/>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>

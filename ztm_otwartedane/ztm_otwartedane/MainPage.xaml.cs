@@ -16,41 +16,45 @@ namespace ztm_otwartedane
 {
     public partial class MainPage : ContentPage
     {
+        List<BusStop> allBusStops = new List<BusStop>();
 
+        public static string ReadAllBusStops()
+        {
+            var assembly = typeof(App).GetTypeInfo().Assembly;
+            Stream stream = assembly.GetManifestResourceStream("ztm_otwartedane.EmbeddedResources.allBusStopsJSON.txt");
+            string text = "";
+            using (var reader = new StreamReader(stream))
+            {
+                text = reader.ReadToEnd();
+            }
 
+            return text;
+        }
+
+        void ParseAllBusStops()
+        {
+            var allBusStopsJSON = ReadAllBusStops();
+            var parsedBusStops = BusStopParser.FromJson(allBusStopsJSON);
+
+            foreach (var busStop in parsedBusStops.BusStops)
+            {
+                allBusStops.Add(busStop);
+            }
+        }
+        
         List<BusStop> GetAllBusStops(string filter = "")
         {
-            List<BusStop> busStops = new List<BusStop>()
-            {
-                new BusStop() {id = 0, name = "wagnera"},
-                new BusStop() {id = 1, name = "otwarta"},
-                new BusStop() {id = 2, name = "kurpinskiego"},
-                new BusStop() {id = 3, name = "piecewska"},
-                new BusStop() {id = 4, name = "warnenska"}
-            };
             if (string.IsNullOrWhiteSpace(filter))
-                return busStops;
+                return allBusStops;
             else
-                return busStops.Where(item => item.name.ToLower().StartsWith(filter.ToLower())).ToList();
+                return allBusStops.Where(item => item.stopName.ToLower().StartsWith(filter.ToLower())).ToList();
         }
-
-        void TestBase()
-        {
-            MySqlConnection connection = new MySqlConnection("Server=www.mkwk018.cba.pl;Port=3306;Database=bus_stops;User Id=mieshki;Password=password;");
-
-           
-
-        }
-
         public MainPage()
         {
             InitializeComponent();
-
-            
-
+            ParseAllBusStops();
 
             listViewBusStops.ItemsSource = GetAllBusStops();
-
         }
 
         
@@ -60,13 +64,18 @@ namespace ztm_otwartedane
             var newSearch = e.NewTextValue;
             listViewBusStops.ItemsSource = GetAllBusStops(newSearch);
             
-        }   
+        }
 
-        private void btnUpdateBusStop_Clicked(object sender, EventArgs e)
+        async private void ListViewBusStops_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            //testLabel.Text = ApiRequests.GET("https://ckan.multimediagdansk.pl/dataset/c24aa637-3619-4dc2-a171-a23eec8f2172/resource/4c4025f0-01bf-41f7-a39f-d156d201b82b/download/stops.json");
-
-            TestBase();
+            if (e.SelectedItem == null)
+                return;
+            
+            var busStop = e.SelectedItem as BusStop;
+            //DisplayAlert("title", busStop.stopName, "ok");
+            
+            await Navigation.PushAsync(new EstimatedArrives(busStop.stopID, busStop.stopName));
+            listViewBusStops.SelectedItem = null;
         }
     }
 }

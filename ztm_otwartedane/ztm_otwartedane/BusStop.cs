@@ -1,13 +1,33 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace ztm_otwartedane
 {
-    class BusStop
+    public partial class BusStopParser
     {
-        public int id { get; set; }
-        public string name { get; set; }
+        [JsonProperty("BusStops")]
+        public BusStop[] BusStops { get; set; }
+    }
+
+    public partial class BusStop
+    {
+        [JsonProperty("stopId")]
+        public int stopID { get; set; }
+
+        [JsonProperty("stopCode")]
+        public string stopCode { get; set; }
+
+        [JsonProperty("stopDesc")]
+        public string stopDesc { get; set; }
+
+        public string stopName { get { return stopDesc + " " + stopCode; }  }
+    }
+
+    public partial class BusStopParser
+    {
+        public static BusStopParser FromJson(string json) => JsonConvert.DeserializeObject<BusStopParser>(json);
     }
 }
  

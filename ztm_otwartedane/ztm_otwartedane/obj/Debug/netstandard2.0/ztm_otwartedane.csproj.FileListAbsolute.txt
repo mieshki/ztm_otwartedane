@@ -14,3 +14,4 @@ C:\Users\mdziadox\source\repos\ztm_otwartedane\ztm_otwartedane\ztm_otwartedane\b
 C:\Users\mdziadox\source\repos\ztm_otwartedane\ztm_otwartedane\ztm_otwartedane\bin\Debug\netstandard2.0\Mono.Android.xml
 C:\Users\mdziadox\source\repos\ztm_otwartedane\ztm_otwartedane\ztm_otwartedane\obj\Debug\netstandard2.0\ztm_otwartedane.csproj.CopyComplete
 C:\Users\mdziadox\source\repos\ztm_otwartedane\ztm_otwartedane\ztm_otwartedane\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\mdziadox\source\repos\ztm_otwartedane\ztm_otwartedane\ztm_otwartedane\obj\Debug\netstandard2.0\EstimatedArrives.xaml.g.cs

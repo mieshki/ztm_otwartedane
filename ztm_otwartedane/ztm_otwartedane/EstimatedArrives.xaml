@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ztm_otwartedane.EstimatedArrives">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout
+                Orientation="Horizontal">
+                <Label
+                    HorizontalOptions="Start"
+                    Text="Linia" />
+                <Label
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Kierunek" />
+                <Label
+                    HorizontalOptions="End"
+                    Text="Odjazd" />
+            </StackLayout>
+       
+            <ListView x:Name="estimatedArrives"
+                      ItemSelected="EstimatedArrives_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout
+                                Orientation="Horizontal">
+                                <Label
+                                    HorizontalOptions="Start"
+                                    Text="{Binding number}"/>
+                                <Label
+                                    HorizontalOptions="CenterAndExpand"
+                                    Text="{Binding direction}" />
+                                <Label
+                                    HorizontalOptions="End"
+                                    Text="{Binding estimatedTime}" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

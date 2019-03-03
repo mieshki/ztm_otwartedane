@@ -1,6 +1,9 @@
 FormsViewGroup
 Google.Protobuf
 MySql.Data
+Newtonsoft.Json
+PCLStorage.Abstractions
+PCLStorage
 System.Configuration.ConfigurationManager
 System.Runtime
 System.Security.AccessControl
@@ -33,3 +36,4 @@ ztm_otwartedane
 netstandard
 System.Reflection.Extensions
 System.Text.Encoding.CodePages
+System.Resources.ResourceManager
